@@ -8,7 +8,7 @@
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th v-for="titulo in titulos">{{titulo}}</th>
+                    <th v-on:click="ordenaColuna(index)" v-for="(titulo, index) in titulos">{{titulo}}</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,14 +23,47 @@
 
 <script>
     export default {
-        props: ['titulos', 'itens'],
+        props: ['titulos', 'itens', 'ordem', 'ordemcol'],
         data: function(){
             return {
-                buscar:''
+                buscar:'',
+                ordemAux: this.ordem || "desc",
+                ordemAuxCol: this.ordemcol || 0
+            }
+        },
+        methods: {
+            ordenaColuna: function (coluna) {
+                this.ordemAuxCol = coluna
+                if (this.ordemAux.toLowerCase() == 'asc'){
+                    this.ordemAux = 'desc';
+                }else{
+                    this.ordemAux = 'asc';
+                }
             }
         },
         computed:{
             lista:function(){
+                
+                let ordem = this.ordemAux;
+                let ordemcol = this.ordemAuxCol;
+
+                ordem = ordem.toLowerCase();
+                ordemcol = parseInt(ordemcol);
+
+                if (ordem == 'asc'){
+                    this.itens.sort(function(a,b){
+                        if (a[ordemcol] > b[ordemcol]) { return 1;}
+                        if (a[ordemcol] < b[ordemcol]) { return -1;}
+                        return 0;
+                    });
+                }else{
+                        this.itens.sort(function(a,b){
+                        if (a[ordemcol] < b[ordemcol]) { return 1;}
+                        if (a[ordemcol] > b[ordemcol]) { return -1;}
+                        return 0;
+
+                    })
+                }
                 return this.itens.filter(res => {
                     for (let percorreTabela = 0; percorreTabela < res.length; percorreTabela++ ){
                         if(res[percorreTabela].toLowerCase().indexOf(this.buscar.toLowerCase()) >= 0){

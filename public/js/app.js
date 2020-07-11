@@ -1991,15 +1991,59 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['titulos', 'itens'],
+  props: ['titulos', 'itens', 'ordem', 'ordemcol'],
   data: function data() {
     return {
-      buscar: ''
+      buscar: '',
+      ordemAux: this.ordem || "desc",
+      ordemAuxCol: this.ordemcol || 0
     };
+  },
+  methods: {
+    ordenaColuna: function ordenaColuna(coluna) {
+      this.ordemAuxCol = coluna;
+
+      if (this.ordemAux.toLowerCase() == 'asc') {
+        this.ordemAux = 'desc';
+      } else {
+        this.ordemAux = 'asc';
+      }
+    }
   },
   computed: {
     lista: function lista() {
       var _this = this;
+
+      var ordem = this.ordemAux;
+      var ordemcol = this.ordemAuxCol;
+      ordem = ordem.toLowerCase();
+      ordemcol = parseInt(ordemcol);
+
+      if (ordem == 'asc') {
+        this.itens.sort(function (a, b) {
+          if (a[ordemcol] > b[ordemcol]) {
+            return 1;
+          }
+
+          if (a[ordemcol] < b[ordemcol]) {
+            return -1;
+          }
+
+          return 0;
+        });
+      } else {
+        this.itens.sort(function (a, b) {
+          if (a[ordemcol] < b[ordemcol]) {
+            return 1;
+          }
+
+          if (a[ordemcol] > b[ordemcol]) {
+            return -1;
+          }
+
+          return 0;
+        });
+      }
 
       return this.itens.filter(function (res) {
         for (var percorreTabela = 0; percorreTabela < res.length; percorreTabela++) {
@@ -38449,8 +38493,18 @@ var render = function() {
       _c("thead", [
         _c(
           "tr",
-          _vm._l(_vm.titulos, function(titulo) {
-            return _c("th", [_vm._v(_vm._s(titulo))])
+          _vm._l(_vm.titulos, function(titulo, index) {
+            return _c(
+              "th",
+              {
+                on: {
+                  click: function($event) {
+                    return _vm.ordenaColuna(index)
+                  }
+                }
+              },
+              [_vm._v(_vm._s(titulo))]
+            )
           }),
           0
         )
