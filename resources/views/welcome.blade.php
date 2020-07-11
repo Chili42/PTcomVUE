@@ -2,7 +2,7 @@
     @extends('layout')
 
     @section('content')
-    <div id="app">
+    
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-10">
@@ -23,9 +23,6 @@
                 </div>
             </div>
         </div>
-    </div>
- 
-    <script src="{{asset('js/app.js')}}"></script>
 
     @endsection
  

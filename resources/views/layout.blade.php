@@ -12,6 +12,10 @@
                     <nav class="navbar" style="background-color: #8eb9e499;">
                         <a class="navbar-brand" href="#" style="color: white;">PT com VUE</a>
                     </nav><br>
-                    @yield('content')
+                    <div id="app">
+                        @yield('content')
+                    </div>
+                    
+                <script src="{{asset('js/app.js')}}"></script>
                 </body>
         </html>

@@ -20,8 +20,8 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('painel', require('./components/Painel.vue').default);
-
 Vue.component('caixa', require('./components/Caixa.vue').default);
+Vue.component('tabela', require('./components/Tabela.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
