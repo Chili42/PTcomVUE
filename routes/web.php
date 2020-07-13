@@ -17,6 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/readme', 'ControllerUnificadoDemoPT@indexReadme');
 Route::get('/tabela', 'ControllerUnificadoDemoPT@indexTable');
-Route::get('/grafico', 'ControllerUnificadoDemoPT@indexGrafico');
+Route::get('/lista-json', 'ControllerUnificadoDemoPT@listaJson');
+Route::get('/tabela-exemplo', 'ControllerUnificadoDemoPT@indexTabelaExemplo');

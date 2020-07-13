@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Storage;
 
 use Illuminate\Http\Request;
 
@@ -11,17 +12,32 @@ class ControllerUnificadoDemoPT extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function indexReadme()
-    {
-        return "ok";
-    }
     public function indexTable()
     {
-        return view('tabela-index');
+        $json = Storage::disk('local')->get('imoveis.json');
+        $json = json_decode($json, true);
+        foreach($json as $key => $item){
+            
+            unset($json[$key]["descricao"],$json[$key]["estado"]);
+        $listaImoveis = json_encode($json);
+        }
+        return view('tabela-index' , compact('listaImoveis'));
     }
-    public function indexGrafico()
+    public function indexTabelaExemplo()
     {
-        return "Grafico";
+        return view('tabela-exemplo');
+    }
+
+    public function listaJson()
+    {
+     
+        $json = Storage::disk('local')->get('imoveis.json');
+        $json = json_decode($json, true);
+        foreach($json as $key => $item){
+            unset($json[$key]["descricao"]);
+        $json_string_modified = json_encode($json);
+     }
+        return $json_string_modified;
     }
 
     /**

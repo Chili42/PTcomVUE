@@ -22,7 +22,11 @@ window.Vue = require('vue');
 Vue.component('painel', require('./components/Painel.vue').default);
 Vue.component('caixa', require('./components/Caixa.vue').default);
 Vue.component('tabela', require('./components/Tabela.vue').default);
-
+Vue.component('migalhas', require('./components/Migalhas.vue').default);
+Vue.component('exemplo', require('./components/Exemplo.vue').default);
+Vue.component('assinatura', require('./components/Footer.vue').default);
+Vue.component('modal', require('./components/Modal.vue').default);
+Vue.component('caixa-readme', require('./components/CaixaReadme.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -32,3 +36,4 @@ Vue.component('tabela', require('./components/Tabela.vue').default);
 const app = new Vue({
     el: '#app',
 });
+
