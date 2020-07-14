@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <h3>Lista de imoveis</h3><br>
-        <table id="teste" class="table table-striped">
+        <table id="tabelaJson" class="table table-striped">
             <thead>
                 <tr>
                     <th v-for="(titulo, index) in titulos" :key="index">{{titulo}}</th>
@@ -25,8 +25,9 @@
     export default {
         props: ['titulos', 'itens', 'ordem', 'ordemcol'],
         }
+
 setTimeout(function(){
-    $('#teste').DataTable({
+    $('#tabelaJson').DataTable({
         "order": [[ 4, "desc" ]],
         "columnDefs": [{
         "render": function(data){

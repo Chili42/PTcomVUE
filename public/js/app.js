@@ -54740,7 +54740,7 @@ var staticRenderFns = [
         _vm._v(" trouxe a tabela "),
         _c("b", [_vm._v("imoveis.json")]),
         _vm._v(
-          ", na formatação foi utilizado o DataTables.\r\n          sua escolha foi por ja fazer uso desta ferramenta, mas existem outras opçãos nativas do VUE como o VUETIFY ou gridjs-vue\r\n          "
+          ", utilizado o DataTables.\r\n          sua escolha foi por ja fazer uso desta ferramenta, mas existem outras opçãos nativas do VUE como o VUETIFY ou gridjs-vue\r\n          "
         )
       ])
     ])

@@ -21,7 +21,7 @@
           usando apenas Javascript nos modelos do VUEJS
           </p>
 
-          <p>Na <b>Tabela Json</b> trouxe a tabela <b>imoveis.json</b>, na formatação foi utilizado o DataTables.
+          <p>Na <b>Tabela Json</b> trouxe a tabela <b>imoveis.json</b>, utilizado o DataTables.
           sua escolha foi por ja fazer uso desta ferramenta, mas existem outras opçãos nativas do VUE como o VUETIFY ou gridjs-vue
           </p>
       </div>
