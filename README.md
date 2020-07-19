@@ -1,44 +1,44 @@
-Projeto foi desenvolvido com as seguintes linguagens/frameworks:
+Projeto foi desenvolvido com as seguintes linguagens/frameworks:<br><br>
 
-Backend: PHP
-	Frontend: HTML, CSS e JS
-	Framework MVC: Laravel
-	Framework frontend: VUEJS, Bootstrap 4
-	Template frontend: AdminLte 3
-
-
-Requisitos para instalar o projeto:
-
-PHP >= 7.1.3
-	BCMath PHP Extension
-	Ctype PHP Extension
-	JSON PHP Extension
-	Mbstring PHP Extension
-	OpenSSL PHP Extension
-	PDO PHP Extension
-	Tokenizer PHP Extension
-	XML PHP Extension
-	Composer
-    NODEJS
+Backend: PHP<br>
+	Frontend: HTML, CSS e JS<br>
+	Framework MVC: Laravel<br>
+	Framework frontend: VUEJS, Bootstrap 4<br>
+	Template frontend: AdminLte 3<br><br>
 
 
-Para utilizar o Composer em ambiente interno, utilizar o CNTLM - Repositorio do CNTLM encontra-se aqui
+Requisitos para instalar o projeto:<br>
 
-Com os requisitos levantados, clonar o repositório ou realizar o download e executar os seguintes comandos:
+PHP >= 7.1.3<br>
+	BCMath PHP Extension<br>
+	Ctype PHP Extension<br>
+	JSON PHP Extension<br>
+	Mbstring PHP Extension<br>
+	OpenSSL PHP Extension<br>
+	PDO PHP Extension<br>
+	Tokenizer PHP Extension<br>
+	XML PHP Extension<br>
+	Composer<br>
+    NODEJS<br><br>
 
-***IMPORTANTE***
 
-Caso o projeto seja instalado em ambiente local, crie o arquivo Database.sqlite dentro do diretório database.
+Para utilizar o Composer em ambiente interno, utilizar o CNTLM - Repositorio do CNTLM encontra-se aqui<br>
 
-Caso o projeto seja instalado em ambiente web corporativo, inclua os dados de acesso ao banco de dados e servidor Ldap no arquivo .env. Aproveite para alterar o tipo de ambiente de "local" para "web" (APP_ENV).
+Com os requisitos levantados, clonar o repositório ou realizar o download e executar os seguintes comandos:<br><br>
+
+***IMPORTANTE***<br><br>
+
+Caso o projeto seja instalado em ambiente local, crie o arquivo Database.sqlite dentro do diretório database.<br>
+
+Caso o projeto seja instalado em ambiente web corporativo, inclua os dados de acesso ao banco de dados e servidor Ldap no arquivo .env. Aproveite para alterar o tipo de ambiente de "local" para "web" (APP_ENV).<br><br>
 
 
 	
-Instalar as dependencias do projeto: composer install
-	Gerar uma chave de acesso ao projeto: php artisan key:generate
-	Criar as tabelas no banco de dados: php artisan migrate
-	Criar dados fictícios (caso sejam acessado em ambiente local): php artisan db:seed
-	Criar ambiente local para acesso ao projeto: php artisan server
+Instalar as dependencias do projeto: composer install<br>
+	Gerar uma chave de acesso ao projeto: php artisan key:generate<br>
+	Criar as tabelas no banco de dados: php artisan migrate<br>
+	Criar dados fictícios (caso sejam acessado em ambiente local): php artisan db:seed<br>
+	Criar ambiente local para acesso ao projeto: php artisan server<br>
 
 
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
