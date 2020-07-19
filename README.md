@@ -1,3 +1,46 @@
+Projeto foi desenvolvido com as seguintes linguagens/frameworks:
+
+Backend: PHP
+	Frontend: HTML, CSS e JS
+	Framework MVC: Laravel
+	Framework frontend: VUEJS, Bootstrap 4
+	Template frontend: AdminLte 3
+
+
+Requisitos para instalar o projeto:
+
+PHP >= 7.1.3
+	BCMath PHP Extension
+	Ctype PHP Extension
+	JSON PHP Extension
+	Mbstring PHP Extension
+	OpenSSL PHP Extension
+	PDO PHP Extension
+	Tokenizer PHP Extension
+	XML PHP Extension
+	Composer
+    NODEJS
+
+
+Para utilizar o Composer em ambiente interno, utilizar o CNTLM - Repositorio do CNTLM encontra-se aqui
+
+Com os requisitos levantados, clonar o repositório ou realizar o download e executar os seguintes comandos:
+
+***IMPORTANTE***
+
+Caso o projeto seja instalado em ambiente local, crie o arquivo Database.sqlite dentro do diretório database.
+
+Caso o projeto seja instalado em ambiente web corporativo, inclua os dados de acesso ao banco de dados e servidor Ldap no arquivo .env. Aproveite para alterar o tipo de ambiente de "local" para "web" (APP_ENV).
+
+
+	
+Instalar as dependencias do projeto: composer install
+	Gerar uma chave de acesso ao projeto: php artisan key:generate
+	Criar as tabelas no banco de dados: php artisan migrate
+	Criar dados fictícios (caso sejam acessado em ambiente local): php artisan db:seed
+	Criar ambiente local para acesso ao projeto: php artisan server
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
